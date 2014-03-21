@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.1//EN"
+  "http://google-web-toolkit.googlecode.com/svn/tags/2.5.1/distro-source/core/src/gwt-module.dtd">
+<module rename-to='testgwtplugin'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gwtplugin.client.TestGwtPlugin' />
+
+	<generate-with class="org.gwtplugin.gen.PluginProviderGenerator">
+		<when-type-assignable class="org.gwtplugin.client.plugin.PluginProvider" />
+	</generate-with>
+
+	<define-configuration-property name="plugins" is-multi-valued="true" />
+	
+
+
+	<!-- <set-configuration-property name="plugins" value="org.gwtplugin.client.MyFirstPlugin"/> -->
+	<extend-configuration-property name="plugins" value="org.gwtplugin.client.MySecondPlugin" />
+
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+
+
+</module>
